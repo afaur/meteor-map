@@ -1,0 +1,30 @@
+<head>
+  <title>Fireworks</title>
+</head>
+
+<body>
+</body>
+
+<template name="Layout">
+  <div class="layout">
+    <h1>Firework Stands</h1>
+
+    <article>
+      {{> yield}}
+    </article>
+
+    <footer>
+      {{> yield "footer"}}
+    </footer>
+  </div>
+</template>
+
+<template name="map">
+  <div class="map-container">
+    {{> googleMap name="exampleMap" options=exampleMapOptions}}
+  </div>
+  {{#contentFor "footer"}}
+    Happy 4th
+  {{/contentFor}}
+</template>
+
